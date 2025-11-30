@@ -19,7 +19,13 @@
         "monochromeImage": "./assets/images/android-icon-monochrome.png"
       },
       "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "permissions": [
+        "android.permission.BLUETOOTH",
+        "android.permission.BLUETOOTH_ADMIN",
+        "android.permission.BLUETOOTH_CONNECT"
+      ],
+      "package": "com.anonymous.my2"
     },
     "web": {
       "output": "static",
@@ -38,11 +44,27 @@
             "backgroundColor": "#000000"
           }
         }
+      ],
+      [
+        "react-native-ble-plx",
+        {
+          "isBackgroundEnabled": false,
+          "modes": [
+            "central"
+          ],
+          "bluetoothAlwaysPermission": "블루투스 기기 연결을 위해 권한이 필요합니다."
+        }
       ]
     ],
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "5db641d5-a72c-47fe-81fc-bded696aad77"
+      }
     }
   }
 }
